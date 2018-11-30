@@ -1,0 +1,15 @@
+{
+  "name": "bot_official",
+  "version": "0.0.1-b",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "moment": "^2.22.2"
+  }
+}
