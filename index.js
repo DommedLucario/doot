@@ -42,4 +42,4 @@ client.on('message', async(message, err) => {
 
 })
 
-client.login('NTE4MTU5Nzc5MjY1MzgwMzUz.DuMteg.xttj7qUhWxInO1_MatYdpX0oqX4')
+client.login('')
