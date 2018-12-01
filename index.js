@@ -15,14 +15,16 @@ fs.readdir('./commands', (err, files) => {
 })
 
 client.on('guildMemberAdd', member => {
-    if(member.user.bot) {
-        member.addRole(member.guild.roles.find(r => r.name === 'Waiting For Testing'))
-    }
+    if(member.user.bot) return member.addRole(member.guild.roles.find(r => r.name === 'Waiting For Testing')).then(()=>{
+        let channel = client.channels.get('518176850346770452')
+        if(channel) channel.send(`<:bottag:518246267760017408> New Member: ${member.user.username}`)
+    })
     let role =member.guild.roles.find(r => r.name === 'Member')
     member.addRole(role).catch(console.error)
     let channel = client.channels.get('518176850346770452')
     if(channel) channel.send(`New Member: ${member.user.username}`)
 })
+
 client.on('ready', () => {
     client.user.setActivity(`${client.users.size} users.`, {type: 'LISTENING'})
     console.log('Ready!')
@@ -42,4 +44,4 @@ client.on('message', async(message, err) => {
 
 })
 
-client.login('')
+client.login('NTE4MTU5Nzc5MjY1MzgwMzUz.DuNE1Q.UbnZdKq3SdhR432IszBtVyeNZMc')
